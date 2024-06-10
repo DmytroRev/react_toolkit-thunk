@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { Button } from "../Button/Button";
 import { addTask } from "../../redux/operations";
-// import css from "./TaskForm.modulel.css";
+import css from "./TaskForm.module.css";
 
 export const TaskForm = () => {
   const dispatch = useDispatch();
@@ -14,10 +14,9 @@ export const TaskForm = () => {
   };
 
   return (
-    //   className={css.form}
-    <form onSubmit={handleSubmit}>
+    <form className={css.form} onSubmit={handleSubmit}>
       <input
-        // className={css.field}
+        className={css.field}
         type="text"
         name="text"
         placeholder="Enter task text..."
